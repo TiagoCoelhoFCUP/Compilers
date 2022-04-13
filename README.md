@@ -12,7 +12,7 @@ Summary: Extend the previous project to work not only with numbers and sum opera
 After this, the challenge is to convert a file written with a subset of the subset of the C code into a set of assemly instructions, kind of like a compiler, and return a working MIPS file as output.
 
 
-For example, the C code in the "test" file:
+For example, by running the PrintFuncs.c executable with the C code in the "test" file as input:
 
 ```C
 fun main(){
@@ -31,7 +31,7 @@ int x = 0;
 }
 ```
 
-is translated to the this corresponding assembly code:
+The output returned is the corresponding assembly code:
 ```assembly
 .data
 x: .word 4
