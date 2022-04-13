@@ -11,7 +11,7 @@ After parsing, the AST for a program is visited/interpreted to print values for 
 Summary: Extend the previous project to work not only with numbers and sum operators and well as with a whole subset of the C language, including variable declaration and assignment, relational operators, loops, IO operations, etc. 
 After this, the challenge is to convert a file written with a subset of the subset of the C code into a set of assemly instructions, kind of like a compiler, and return a working MIPS file as output.
 
-Along with all the files regarding the work itself, I have added some files (example1.txt, example2.txt, etc...), which are some examples tested by us that exemplify the functioning of the parser, as well as the printing of the respective abstract syntax trees.
+Along with all the files regarding the work itself, I have added some files (test.txt, test2.txt, test3.txt), which are some examples tested by us that exemplify the functioning of the parser, as well as the printing of the respective abstract syntax trees and the conversion to assembly.
 
 For example, by running the program for the following C code:
 
