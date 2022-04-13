@@ -1,0 +1,12 @@
+func main(){
+ int x = 4;
+ int y = 5;
+ if(x - 4 >= y - 2){
+   k = k + 12;
+   z = z - 12;
+ }
+ else{
+ k = 4;
+ }
+}
+

@@ -1,0 +1,96 @@
+.data
+x: .word 4
+y: .word 4
+
+.text
+li $a0,1
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+sw $a0, x
+li $a0,5
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+sw $a0, y
+Label_1:
+lw $a0, x
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+li $a0,20
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $t1, 0($sp)
+addiu $sp, $sp, 4
+lw $t0, 0($sp)
+addiu $sp, $sp, 4
+slt $a0, $t0, $t1
+subu $a1, $t0, $t1
+sltu $a1, $zero, $a1
+xori $a1, $a1, 1
+or $a0, $a0, $a1
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+beq $a0, $zero, Label_2
+lw $a0, x
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+li $a0,2
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $t1, 0($sp)
+addiu $sp, $sp, 4
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+div $a0, $t1
+mfhi $a0
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+li $a0,0
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $t1, 0($sp)
+addiu $sp, $sp, 4
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+subu $a0, $a0, $t1
+sltu $a0, $zero, $a0
+xori $a0, $a0, 1
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+beq $a0, $zero, Label_3
+lw $a0, x
+li $v0, 1
+syscall
+j Label_4
+Label_3:
+lw $a0, y
+li $v0, 1
+syscall
+Label_4:
+lw $a0, x
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+li $a0,1
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $t1, 0($sp)
+addiu $sp, $sp, 4
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+add $a0, $a0, $t1
+addiu $sp, $sp, -4
+sw $a0, 0($sp)
+lw $a0, 0($sp)
+addiu $sp, $sp, 4
+sw $a0, x
+j Label_1
+Label_2:
+li $v0, 10
+syscall

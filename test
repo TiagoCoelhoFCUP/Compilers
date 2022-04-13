@@ -1,0 +1,15 @@
+func main(){
+int x = 0;
+ while(x < 4) {
+  while( y <= 5 && 4 > 3 ){
+   scanf("%f",x);
+   if(x - 4 >= y - 2){
+     k = k + 12;
+   }
+   x = x + 1;
+   int y = y + 1;
+   printf("%d",x);
+  }
+ }
+}
+
