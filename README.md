@@ -3,7 +3,7 @@ Projects developed under the Compilers college chair during the 2018/2019 school
 
 ## Project 1) Abstract syntax trees (ASTs)
 
-Summary: Building ASTs for a language of arithmetic expressions involving integers. We start with "programs" defined by a single expression made of numbers and sum (+) operations.  
+Summary: Building ASTs for a language of arithmetic expressions involving integers, using C, Bison and Flex. We start with "programs" defined by a single expression made of numbers and sum (+) operations.  
 After parsing, the AST for a program is visited/interpreted to print values for expressions.
 
 ## Project 2) C to Assembly
